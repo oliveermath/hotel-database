@@ -85,5 +85,5 @@ A arquitetura do banco de dados é composta por **8 tabelas principais**, desenh
    CREATE DATABASE HotelDB;
    USE HotelDB;
    ```
-2. Execute o script SQL completo em: 
+2. Execute o script SQL completo em: https://github.com/oliveermath/hotel-database/blob/main/banco%20de%20dados%20hotel.sql
    
