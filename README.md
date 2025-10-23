@@ -74,10 +74,6 @@ A arquitetura do banco de dados é composta por **8 tabelas principais**, desenh
 
 [REDE DE HOTEL.pdf](https://github.com/user-attachments/files/23097027/REDE.DE.HOTEL.pdf)
 
-### ↪️ Modelol lógico (Ferramenta: DB Designer)
-
-<img width="673" height="437" alt="Modelo logico_Hotel" src="https://github.com/user-attachments/assets/61313705-5d8c-4cbd-af5e-1ebe6624ac16" />
-
 ## ⚙️ Como usar
 
 1. Crie o banco de dados:
