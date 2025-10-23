@@ -18,7 +18,6 @@ CREATE TABLE Hotel (
   Telefone VARCHAR(15),
   Email VARCHAR(150),
   PRIMARY KEY(ID),
-  INDEX (Endereco_idEndereco),
   CONSTRAINT FK_Hotel_Endereco FOREIGN KEY (Endereco_idEndereco)
     REFERENCES Endereco (idEndereco)
     ON DELETE RESTRICT ON UPDATE CASCADE
@@ -35,8 +34,6 @@ CREATE TABLE Funcionario (
   Login VARCHAR(100),
   Senha VARCHAR(100),
   PRIMARY KEY(idFuncionario),
-  INDEX (HOTEL_ID),
-  INDEX (Endereco_idEndereco),
   CONSTRAINT FK_Funcionario_Endereco FOREIGN KEY (Endereco_idEndereco)
     REFERENCES Endereco (idEndereco)
     ON DELETE RESTRICT ON UPDATE CASCADE,
@@ -53,11 +50,11 @@ CREATE TABLE Hospede (
   Telefone VARCHAR(15),
   Email VARCHAR(150),
   PRIMARY KEY(idHospede),
-  INDEX (Endereco_idEndereco),
   CONSTRAINT FK_Hospede_Endereco FOREIGN KEY (Endereco_idEndereco)
     REFERENCES Endereco (idEndereco)
     ON DELETE RESTRICT ON UPDATE CASCADE
 );
+
 
 CREATE TABLE Pagamento (
   idPagamento INT UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -76,7 +73,6 @@ CREATE TABLE Quarto (
   PrecoDiaria DECIMAL(10,2),
   StatusQuarto VARCHAR(50),
   PRIMARY KEY(idQuarto),
-  INDEX (HOTEL_ID),
   CONSTRAINT FK_Quarto_Hotel FOREIGN KEY (HOTEL_ID)
     REFERENCES Hotel (ID)
     ON DELETE RESTRICT ON UPDATE CASCADE
@@ -91,9 +87,6 @@ CREATE TABLE Reserva (
   DataSaida DATE,
   StatusReserva VARCHAR(50),
   PRIMARY KEY(idReserva),
-  INDEX (Funcionario_idFuncionario),
-  INDEX (Hospede_idHospede),
-  INDEX (Pagamento_idPagamento),
   CONSTRAINT FK_Reserva_Funcionario FOREIGN KEY (Funcionario_idFuncionario)
     REFERENCES Funcionario (idFuncionario)
     ON DELETE RESTRICT ON UPDATE CASCADE,
@@ -117,4 +110,3 @@ CREATE TABLE ReservaQuarto (
     REFERENCES Quarto (idQuarto)
     ON DELETE RESTRICT ON UPDATE CASCADE
 );
-
