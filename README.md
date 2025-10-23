@@ -84,4 +84,6 @@ A arquitetura do banco de dados é composta por **8 tabelas principais**, desenh
    ```sql
    CREATE DATABASE HotelDB;
    USE HotelDB;
+   ```
+2. Execute o script SQL completo em: 
    
